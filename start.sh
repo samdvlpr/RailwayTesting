@@ -6,7 +6,7 @@ echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 
 adduser -h /home/$Username -s /bin/sh -D $Username
 
-echo -n "$Username:$password" | chpasswd
+echo -n "$Username:$Password" | chpasswd
 
 ssh-keygen -A
 
