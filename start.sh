@@ -1,12 +1,14 @@
 echo -n "root:$Password"
 
-apt-get update
+apt-get update && apt-get upgrade -y
 
 apt-get install -y openssh-server
 
 mkdir /var/run/sshd
 
 # echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+
+sudo useradd -s /bin/bash -d /home/$Username/ -m -G sudo $Username
 
 # adduser -h /home/$Username -s /bin/sh -D $Username
 
