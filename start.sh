@@ -1,14 +1,14 @@
-echo -n "$Username:$Password"
+# echo -n "$Username:$Password"
 
-apt install -y openssh-server
+apt-get install -y openssh-server
 
 mkdir /var/run/sshd
 
 # echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 
-adduser -h /home/$Username -s /bin/sh -D $Username
+# adduser -h /home/$Username -s /bin/sh -D $Username
 
-echo -n "$Username:$Password" | chpasswd
+echo -n "root:$Password" | chpasswd
 
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
