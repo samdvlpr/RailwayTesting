@@ -23,6 +23,7 @@ sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' 
 ssh-keygen -A
 
 # Add Vault
+apt-get install apt-utils
 apt-get install -y curl
 sudo apt-get install -y gpg
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --yes --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
