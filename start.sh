@@ -7,3 +7,5 @@ echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 adduser -h /home/$Username -s /bin/sh -D $Username
 
 echo -n "$Username:$password" | chpasswd
+
+chmod +x -v entrypoint.sh
