@@ -6,7 +6,7 @@ apt-get install -y openssh-server
 
 mkdir /var/run/sshd
 
-# echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 
 sudo useradd -s /bin/bash -d /home/$Username/ -m -G sudo $Username
 
