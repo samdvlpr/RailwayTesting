@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -n "$Username:$Password"
 
 apt-get update && apt-get upgrade -y
