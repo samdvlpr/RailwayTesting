@@ -1,6 +1,4 @@
-FROM alpine:3.18.3
-
-COPY --from=vault:1.13.3 vault /usr/bin/
+FROM ubuntu:latest
 
 COPY --chmod=755 start.sh ./
 
