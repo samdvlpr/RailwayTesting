@@ -1,4 +1,4 @@
-echo -n "root:$Password"
+echo -n "$Username:$Password"
 
 apt-get update && apt-get upgrade -y
 
@@ -12,7 +12,7 @@ sudo useradd -s /bin/bash -d /home/$Username/ -m -G sudo $Username
 
 # adduser -h /home/$Username -s /bin/sh -D $Username
 
-echo -n "root:$Password" | chpasswd
+echo -n "$Username:$Password" | chpasswd
 
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
