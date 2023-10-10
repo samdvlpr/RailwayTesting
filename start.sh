@@ -24,4 +24,4 @@ ssh-keygen -A
 
 exec /usr/sbin/sshd -D -e "$@"
 
-sudo apt update && sudo apt install gpg
+apt install gpg
