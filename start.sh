@@ -1,4 +1,4 @@
-# echo -n "$Username:$Password"
+echo -n "root:$Password"
 
 apt-get update
 
