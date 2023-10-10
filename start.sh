@@ -10,7 +10,7 @@ mkdir /var/run/sshd
 
 echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 
-sudo useradd -s /bin/bash -d /home/$Username/ -m -G sudo $Username
+useradd -s /bin/bash -d /home/$Username/ -m -G $Username
 
 # adduser -h /home/$Username -s /bin/sh -D $Username
 
