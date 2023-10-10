@@ -12,7 +12,7 @@ sudo useradd -s /bin/bash -d /home/$Username/ -m -G sudo $Username
 
 # adduser -h /home/$Username -s /bin/sh -D $Username
 
-echo -n "$Username:$Password" | chpasswd
+echo -n "$Username:$Password" | sudo chpasswd
 
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
