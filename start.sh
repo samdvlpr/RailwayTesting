@@ -2,7 +2,7 @@
 
 echo -n "$Username:$Password"
 
-apt-get update && apt-get upgrade -y
+apt-get update && apt-get upgrade sudo -y
 
 apt-get install -y openssh-server
 
