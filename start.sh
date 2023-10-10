@@ -8,4 +8,6 @@ adduser -h /home/$Username -s /bin/sh -D $Username
 
 echo -n "$Username:$password" | chpasswd
 
-chmod +x -v entrypoint.sh
+ssh-keygen -A
+
+exec /usr/sbin/sshd -D -e "$@"
