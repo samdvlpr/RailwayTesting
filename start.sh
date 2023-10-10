@@ -1,5 +1,7 @@
 # echo -n "$Username:$Password"
 
+apt-get update
+
 apt-get install -y openssh-server
 
 mkdir /var/run/sshd
