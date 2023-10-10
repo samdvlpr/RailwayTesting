@@ -6,8 +6,4 @@ ENTRYPOINT ["/bin/sh"]
 
 EXPOSE 22
 
-COPY entrypoint.sh /
-
 CMD ["start.sh"]
-
-ENTRYPOINT ["/entrypoint.sh"]
